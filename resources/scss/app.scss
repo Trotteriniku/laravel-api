@@ -1,0 +1,32 @@
+@use './partials/variables' as *;
+
+$fa-font-path: "../fonts/webfonts" !default;
+
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+
+@import '~bootstrap/scss/bootstrap';
+
+h1 {
+    color: $text-color;
+}
+
+.my-sidebar{
+    // margin: 0;
+    // padding: 0;
+    width: 200px;
+    // background-color: #f1f1f1;
+    height:calc(100vh - 70px);
+    overflow: auto;
+
+
+
+    background: rgb(255,141,0);
+background: linear-gradient(180deg, #FFD268 15%,  #FF982F 50%);
+}
+
+.fixed-container{
+    width: calc(100% - 200px);
+}
