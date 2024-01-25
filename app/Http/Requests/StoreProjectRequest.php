@@ -25,7 +25,7 @@ class StoreProjectRequest extends FormRequest
             'title' => ['required', 'min:3', 'max:200', 'unique:projects'],
             'body' => ['nullable'],
             'link' => ['required', 'url'],
-            'preview' => [' image'],
+            'preview' => ['required'],
             'type_id' => ['nullable', 'exists:types,id'],
             'technologies' => ['exists:technologies,id']
         ];
@@ -39,7 +39,7 @@ class StoreProjectRequest extends FormRequest
             'title.max' => 'Il titolo deve avere massimo :max caratteri',
             'title.unique' => 'Questo titolo esiste già',
             'link.url' => 'L\'immagine deve essere di tipo url',
-            'preview.image' => 'L\'immagine deve essere di tipo image'
+            'preview.required' => 'L\'immagine deve essere di tipo image'
         ];
     }
 }
